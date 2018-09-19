@@ -29,4 +29,11 @@ describe 'PaymentCalculator' do
       expect(subject.calculate_pay(5, 9, 4)).to eq 136
     end
   end
+
+  context 'before bed' do
+    it 'should pay at a rate of 12 per hour' do
+      expect(subject.calculate_pay(5, 6, 6)).to eq 12
+      expect(subject.calculate_pay(5, 9, 9)).to eq 48
+    end
+  end
 end
